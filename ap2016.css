@@ -86,6 +86,150 @@ body > .container > header > nav > ul > li > a {
   margin: 0 0 5px;
 }
 
+.commit {
+    padding: 16px 0;
+}
+
+.commit .dot {
+    position: absolute;
+    left: 50%;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #dfdfdf;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: left;
+    margin-top: 35px;
+}
+
+.commit .empty {
+    height: 50px;
+}
+
+.commit .first::after {
+    height: 50%;
+    text-align: center;
+}
+
+.commit.last::after {
+     height: 50%;
+ }
+
+.event-full .commit {
+    text-align: center;
+}
+
+.commit.empty::after {
+    -webkit-transform: translateX(-50%);
+    transform: translate(-50%);
+}
+.commit::after {
+    margin-top: 0px;
+    position: absolute;
+    z-index: -1000;
+    width: 10px;
+    height: 30%;
+    content: " ";
+    background-color: #dfdfdf;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    left: 50%;
+}
+
+@media (min-width: 768px) {
+    .event-full .commit {
+        right: 41.66667%;
+        float: left;
+        width: 16.66667%;
+    }
+}
+
+.event-full .commit {
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.event-full .user {
+    position: relative;
+}
+
+.event-full.general .title {
+    padding-top: 10px;
+}
+
+.event-full .title {
+    float: left;
+    width: 41.66667%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.event-full h1, .event-full h2, .event-full h3 {
+    margin-top: 0.7em;
+}
+
+.event-full h2 {
+    font-size: 25px;
+}
+
+.event-full::before, .event-full::after {
+    content: " ";
+    display: table;
+}
+
+.event-full::after {
+    clear: both;
+}
+
+.event-full.general .talk-description {
+    padding-top: 10px;
+}
+
+.event-full .keynote-text {
+    font-size: 16px;
+}
+
+.event-full .talk-description {
+    left: 16.66667%;
+    float: left;
+    width: 41.66667%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+}
+.event-full .talk-description, .event-full-rtl .talk-description, .talk-block .master .talk-description, .talk-block .practical .talk-description {
+    padding-top: 20px;
+}
+
+.talk-description {
+    max-height: 100px;
+    padding: 16px 0;
+}
+.event-full h1, .event-full h2, .event-full h3 {
+    margin-top: 0.7em;
+}
+
+.event-full small {
+    right: 10px;
+}
+.event-full small {
+    position: absolute;
+    display: block;
+    margin-top: -5px;
+    color: #d1d1d1;
+}
+small {
+    font-size: 80%;
+}
+
 #extended {
   font-size: 80%;
 }
@@ -293,3 +437,115 @@ h1, h2 {
 
 .website-license {
 }
+
+.gh-ribbon{
+  position: fixed; 
+  top: 0;
+  border: 0;
+  z-index: 10000;
+}
+
+@media screen and (max-width: 768px){
+  .gh-ribbon{
+    display: none;
+  }
+}
+
+.branch-description {
+    margin-left: -10px;
+    margin-right: -10px;
+    vertical-align: bottom;
+}
+
+.branch-description:before, .branch-description:after {
+    content: " ";
+    display: table;
+}
+
+.branch-description:after {
+    clear: both;
+}
+
+@media (min-width: 768px) {
+    .branch-description .branch-name {
+        float: left;
+        width: 33.33333%;
+    }
+}
+
+.branch-description .branch-name {
+        position: relative;
+        min-height: 1px;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 100px;
+        font-size: 24px;
+}
+
+.branch-description .master {
+    right: 10px;
+}
+
+.branch-description .master, .branch-description .practical {
+    position: absolute;
+    bottom: 0;
+}
+
+.branch-description .branch {
+    position: relative;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    left: -1px;
+}
+.branch {
+    height: 103px;
+    margin-bottom: -2px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .branch-description .branch {
+        float: left;
+        width: 33.33333%;
+    }
+}
+
+.avatar {
+    width: 96px;
+    height: 96px;
+    border: 1px solid #d1d1d1;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    .talk-block .event {
+        margin-top: 0;
+        float: left;
+        width: 50%;
+    }
+}
+
+.talk-block .event {
+    position: relative;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+    .talk-block .practical .commit-holder {
+        right: 80%;
+        float: right;
+        width: 20%;
+    }
+}
+.talk-block .practical .commit-holder {
+    position: relative;
+    min-height: 1px;
+    padding-right: 11px;
+    padding-left: 10px;
+}
+
